@@ -21,7 +21,6 @@
           display: flex;
             justify-content: space-between;
             align-items: center;
-          
         }
         header {
           padding: 20px 20px;
@@ -115,33 +114,43 @@
             <h1>Open Labels Initiative</h1>
             <p>A standardized framework and data model for EVM address labeling.</p>
             <a href="https://github.com/openlabelsinitiative/OLI" target="_blank" class="button">View on GitHub</a>
+            <p>Upcoming community calls can be found in our <a href="https://calendar.google.com/calendar/u/3?cid=MmQ0MzYxNzQ3ZGFiY2M3ZDJkZjk0NjZiYmY3MmNmZDUwZTNjMjE2OTQ4YzgyNmI4OTBmYjYyN2VmNGRjNjQ4OEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">Google Calendar</a>!</p>
         </section>
 
         <section class="goal">
             <h2>Goal</h2>
-            <p>This initiative aims to tackle the issue of isolated and non-standardized contract and wallet labeling datasets within the blockchain data community. By introducing a standardized framework for smart contract and wallet labels, we advocate for the consolidation into a single, universally accessible data structure utilized by various data providers.</p>
-            <p>The Ethereum Foundation funded this effort as part of the <a href="https://esp.ethereum.foundation/data-collection-grants" target="_blank">Data Collection Grants</a>.</p>
+            <p>This initiative tackles the issue of isolated and non-standardized datasets of address labels within the blockchain community. It introduces a flexible, open and community owned data framework for anyone to use and contribute to.</p>
+            <p>By aligning on a single framework for address labels, we streamline our labeling efforts, avoid redundant work and make it easier to share datasets within the community.</p>
+            <p>The OLI repository functions as the community maintainer of the OLI framework. Additionally, it serves as a neutral entity that provides tools for data entry through attestations and automated activity tagging.</p>
         </section>
 
         <section class="tagging">
             <h2>Tagging</h2>
-            <p>All labeling takes place by assigning pre-defined tags with values to addresses. Tags are a flexible solution that isn't as prescriptive as other options. Each address can have multiple tags assigned, but each tag_id can only be assigned once per address.</p>
-            <p>A list of approved tags can be found <a href="https://github.com/openlabelsinitiative/oli/blob/main/tag_definitions.yml" target="_blank">here</a>.</p>
+            <p>Labelling is performed by assigning a pre-defined `tag_id` with a `value` to an `address` & `chain_id` combination. Each address can have as many tags assigned as it wants, but each `tag_id` can only be assigned once per `address`.</p>
+            <p><strong>Key Fields:</strong></p>
+            <ul>
+                <li>`address`: the hexadecimal public address of a smart contract or externally owned account (EOA)</li>
+                <li>`chain_id`: unique identifier as defined by <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md" target="_blank">EIP-155</a> or <a href="https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md" target="_blank">CAIP-2</a></li>
+                <li>`tag_id`: tag IDs represent a wide range of concepts. For OLI-compliant tags, please refer to <a href="https://github.com/openlabelsinitiative/OLI/blob/main/tags/tag_definitions.yml" target="_blank">tag_defintions.yml</a>.</li>
+                <li>`value`: Each `tag_id` has a value field that specifies the content of the tag applied.</li>
+            </ul>
+            <img src="data_model/data_model.svg" alt="Data Model" width="400">
         </section>
 
         <section class="contributors">
             <h2>Contributors</h2>
             <h3>Founding Members</h3>
-            <p>These teams applied for grants with the Ethereum Foundation and started building out the core structure.</p>
             <a href="https://www.growthepie.xyz/" target="_blank"><img src="https://i.ibb.co/54W8j8K/Group-165.png" alt="growthepie logo"></a>
             <a href="https://www.walletlabels.xyz/" target="_blank"><img src="https://i.ibb.co/DMkw90y/Wallet-Labels-logo.png" alt="Walletlabels logo"></a>
-            
-            <h3>Sponsors</h3>
-            <ul>
-                <li><a href="https://ethereum.foundation/" target="_blank">Ethereum Foundation</a></li>
-            </ul>
-            
-            <h3>Other Supporters</h3>
+        </section>
+
+        <section class="sponsors">
+            <h2>Sponsors</h2>
+            <p>The <a href="https://ethereum.foundation/" target="_blank">Ethereum Foundation</a> funded this effort as part of the <a href="https://esp.ethereum.foundation/data-collection-grants" target="_blank">Data Collection Grants</a>.</p>
+        </section>
+
+        <section class="supporters">
+            <h2>Other Supporters</h2>
             <ul>
                 <li><a href="https://github.com/ccerv1" target="_blank">Carl Cervone</a> & <a href="https://github.com/ryscheng" target="_blank">Raymond Cheng</a> | <a href="https://github.com/opensource-observer" target="_blank">Open Source Observer</a></li>
                 <li><a href="https://github.com/MSilb7" target="_blank">Michael Silberling</a> | <a href="https://www.oplabs.co/" target="_blank">OP Labs</a></li>
